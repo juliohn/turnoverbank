@@ -21,7 +21,7 @@ export default function AddIncome({handleMenu}) {
   const [resume, setResume] = useState<ResumeProps>(); 
   const [amount,setAmount] = useState<string>('0.00');
   const [description,setDescription] = useState<string>('');
-  const [file, setFile] = useState<string | ArrayBuffer>()
+  const [file, setFile] = useState<string>()
   
   const loadData = async () => {
     try {
