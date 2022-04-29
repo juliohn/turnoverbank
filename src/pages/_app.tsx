@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import { AuthProvider } from './contexts/AuthContext'
+import { AuthProvider } from '../contexts/AuthContext'
 import {useEffect, useState} from 'react'
 
 import {isMobile} from 'react-device-detect';

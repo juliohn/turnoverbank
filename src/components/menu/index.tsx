@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 import Router from "next/router";
-import { AuthContext } from '../../pages/contexts/AuthContext'
+import { AuthContext } from '../../contexts/AuthContext'
 
 import {isMobile} from 'react-device-detect';
 

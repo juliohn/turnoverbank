@@ -1,9 +1,8 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import { FormEvent, useContext, useState } from 'react'
-import { AuthContext } from '../contexts/AuthContext';
+import { AuthContext } from '../../contexts/AuthContext';
 import OutHeader from '../../components/out-header'
-
 
 import {
   Row,

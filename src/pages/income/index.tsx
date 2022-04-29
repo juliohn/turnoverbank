@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import Head from 'next/head';
 
-export default function Check({handleMenu}) {
+export default function Income({handleMenu}) {
   const [dataList, setDataList] = useState<IncomesProps[]>();    
     
   const loadData = async () => {
