@@ -18,7 +18,7 @@ import PrimaryButton from '../../components/buttons/primary';
 export default function AddIncome({handleMenu}) {
   
   const [resume, setResume] = useState<ResumeProps>(); 
-  const [amount,setAmount] = useState('0.00');
+  const [amount,setAmount] = useState<string>('0.00');
   const [description,setDescription] = useState<string>('');
   const [file, setFile] = useState<string>()
   
@@ -44,16 +44,16 @@ export default function AddIncome({handleMenu}) {
   },[]);
            
 
-  function handleFile(event: { target: { files: any; }; }) {
+  function handleFile(event) {
     
     let files = event.target.files;
     let reader = new FileReader();
         reader.readAsDataURL(files[0]);
         reader.onload = (e) => {
-          setFile(e.target.result);
+          setFile(e.target.result as string);
         };
   }
-
+  
 
   const handleSave = useCallback(async () => {
     try {
