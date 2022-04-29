@@ -115,7 +115,14 @@ export default function AddIncome({handleMenu}) {
             <FontAwesomeIcon icon={faMoneyBill} size="lg" />
             Amount
           </label>
-          <InputMoney thousandSeparator={false}  decimalScale={2} allowNegative={false}  fixedDecimalScale decimalSeparator={"."} prefix={'$'} placeholder='amount' value={amount} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setAmount(e.target.value)}/>   
+          
+          <InputMoney thousandSeparator={false}  decimalScale={2} 
+            allowNegative={false}  fixedDecimalScale decimalSeparator={"."}
+             prefix={'$'} placeholder='amount' value={amount}              
+              onValueChange={(values) => {
+                const {formattedValue, value} = values;                
+                setAmount(formattedValue);                
+              }}/>   
         </FormItem>
 
         <FormItem>
