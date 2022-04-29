@@ -1,10 +1,10 @@
 
 import styled from 'styled-components';
-import {Row,Col } from '../globals/styles';
+import {RowGlobal,ColGlobal } from '../globals/styles';
 
 
-export const RowG = styled(Row)``;
-export const ColG = styled(Col)``;
+export const Row = styled(RowGlobal)``;
+export const Col = styled(ColGlobal)``;
 export const Box = styled.div`
   margin: 0 auto;
   width: 100%;    

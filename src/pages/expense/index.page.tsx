@@ -2,17 +2,15 @@ import React, {useEffect,useState, useRef} from 'react';
 import InHeader from '../../components/in-header';
 import Record from '../../components/record';
 import Router from "next/router";
-import Swal from 'sweetalert2'
-
-import { ListG} from './styles';
-
 import { expenseData } from '../../services/expense';
 import { ExpenseProps } from '../../services/expense/types';
-
 import FloaterButton from '../../components/buttons/floater';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import Head from 'next/head';
+import Swal from 'sweetalert2'
+
+import { List} from './styles';
 
 export default function Expense({handleMenu}) {
   const [dataList, setDataList] = useState<ExpenseProps[]>();    
@@ -27,8 +25,14 @@ export default function Expense({handleMenu}) {
       const expenses = response.data;             
       setDataList(expenses);      
     } catch (error) {
-      console.log(error);
-    }        
+      const {message} = error.response.data      
+       Swal.fire({
+               title: 'Error!',
+               text: message,
+               icon: 'error',
+               confirmButtonText: 'Ok'
+        });
+    }   
   }
 
   const handleAddExpense = () =>{
@@ -37,28 +41,22 @@ export default function Expense({handleMenu}) {
   
   return (
     <>
-
       <Head>
         <title>Expenses | BNB Bank</title>
       </Head>   
 
       <InHeader title='Expenses' handleMenu={handleMenu}/>           
-      <ListG>
+      <List>
           {
-            dataList?.map(function(item){            
-            return (
-                    <Record key={item.id} item={item} />
-                  )
-            })
+            dataList?.map(function(item){ return (<Record key={item.id} item={item} />)})
           } 
-      </ListG>   
+      </List>   
 
       <a onClick={handleAddExpense}>
         <FloaterButton background="#2799FB">
           <FontAwesomeIcon icon={faPlus} size="2x" color="#FFFFFF"/>
         </FloaterButton>
       </a>
-
     </>
   );
 }

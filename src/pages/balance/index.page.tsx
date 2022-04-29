@@ -4,9 +4,8 @@ import Record from '../../components/record';
 import Link from 'next/link'
 
 import {
-  ListG,
-  ColG,
-  RowG,
+  List,
+  Col,  
   Box,
   Description,
   Amount
@@ -56,60 +55,60 @@ export default function Balance({handleMenu}) {
       <InHeader title='BNB Bank' handleMenu={handleMenu}/>
       
       <Box background={'#BDE0FE'} color="#fff">
-        <ColG>
+        <Col>
           <Description>
             Current balance
           </Description>
           <Amount fontSize="32px">
             {resume?.current ? resume?.current : '- - - - -'}
           </Amount>
-        </ColG>        
+        </Col>        
       </Box>
       <Box background={'#DAEFFF'}>
-        <ColG>
+        <Col>
           <Description>
             Incomes
           </Description>
           <Amount>
             {resume?.check ? resume?.check : '- - - - -'}
           </Amount>
-        </ColG>
-        <ColG flex="0">        
+        </Col>
+        <Col flex="0">        
           <Link href="/add-income">
             <a>
               <FontAwesomeIcon size='2x' icon={faPlus} color="#2799FB"/>
               Deposit a Check
             </a>      
           </Link>                                    
-        </ColG>
+        </Col>
         
       </Box>
       <Box background={'#F1F9FE'}>
-        <ColG>
+        <Col>
           <Description>
             Expenses
           </Description>
           <Amount>
           {resume?.expense ? resume?.expense : '- - - - -'}
           </Amount>
-        </ColG>
-        <ColG flex="0">        
+        </Col>
+        <Col flex="0">        
           <Link href="/add-expense">
             <a>
               <FontAwesomeIcon size='2x' icon={faPlus} color="#2799FB"/>
               Add Expense
             </a>      
           </Link>                                    
-        </ColG>
+        </Col>
       </Box>
-      <ListG>
+      <List>
           {dataList?.map(function(item){            
               return (
                       <Record key={item.id} item={item} />                   
                     )
             })
           } 
-      </ListG>         
+      </List>         
     </>
   );
 }

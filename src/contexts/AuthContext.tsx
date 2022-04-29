@@ -39,8 +39,7 @@ export function AuthProvider({children}:AuthProviderProps){
     try {
       const response = await api.post('auth/logar',{email,password});
 
-      const {access_token} = response.data;
-      
+      const {access_token} = response.data;      
       
       setCookie(undefined,'tbnb.access_token',access_token,{
         maxAge: 60 * 60 * 24 * 30,

@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import 'react-calendar/dist/Calendar.css';
+
 import React, {useEffect,useState, useCallback} from 'react';
 import InHeader from '../../components/in-header';
 import Router from "next/router";
@@ -154,11 +154,13 @@ export default function AddIncome({handleMenu}) {
                 
         <a onClick={handleSave}>
           <PrimaryButton background={"#2799fa"}>
-            <FontAwesomeIcon icon={faCheckCircle} color="#FFFFFF"/>
-            Add Income
+            <>
+              <FontAwesomeIcon icon={faCheckCircle} color="#FFFFFF"/>
+              Add Income
+            </>
           </PrimaryButton>
+          
         </a>
-
       </Content>  
 
     </>

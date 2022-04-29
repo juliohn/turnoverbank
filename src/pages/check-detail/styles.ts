@@ -1,8 +1,7 @@
 
 import styled from 'styled-components';
-import { Row, Col, InputGlobal } from '../../components/globals/styles';
-export const RowG = styled(Row)``;
-export const ColG = styled(Col)``;
+import { InputGlobal } from '../../components/globals/styles';
+
 export const Input = styled(InputGlobal)``; 
 
 export const FormItem = styled.div`

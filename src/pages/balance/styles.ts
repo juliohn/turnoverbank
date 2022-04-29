@@ -1,14 +1,11 @@
 
 import styled from 'styled-components';
-import {Row,Col,List } from '../../components/globals/styles';
+import {RowGlobal,ColGlobal,ListGlobal } from '../../components/globals/styles';
 
+export const List = styled(ListGlobal)``;
+export const Col = styled(ColGlobal)``;
 
-
-export const ListG = styled(List)``;
-export const RowG = styled(Row)``;
-export const ColG = styled(Col)``;
-
-export const Box = styled(Row).attrs((props: {background: string,color:string}) => props)`
+export const Box = styled(RowGlobal).attrs((props: {background: string,color:string}) => props)`
 
   margin: 0 auto;
   width: 100%;    

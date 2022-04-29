@@ -1,13 +1,10 @@
 import '../styles/globals.css'
 import { AuthProvider } from '../contexts/AuthContext'
-import {useEffect, useState} from 'react'
+import { useState } from 'react'
 
 import {isMobile} from 'react-device-detect';
 
 import type { AppProps } from 'next/app'
-  
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faBars } from '@fortawesome/free-solid-svg-icons';
 
 import Menu from '../components/menu';
 
@@ -17,15 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   function handleToggleMenu(){    
     setOpenMenu(!openMenu) 
   }  
-  // useEffect(() => {
-  //   if(isMobile) {
-  //     // menu on click
-  //     handleToggleMenu();
-  //   }
-  // }, []);
-
-  // console.log("isMobile", isMobile);
-  // console.log("openMenu", openMenu);
+  
 
   return (
     <AuthProvider>  

@@ -74,8 +74,6 @@ export default function CheckDetails({handleMenu}) {
 
   }, [id]);
 
-
-  
   return (
     <>
       <InHeader title='Check Details' handleMenu={handleMenu}/>
@@ -127,14 +125,18 @@ export default function CheckDetails({handleMenu}) {
 
             <a onClick={()=>handleUpdate('R')}>
               <SecondaryButton background={"#BDE0FE"}>
-                <FontAwesomeIcon icon={faCheckCircle} color="#2799fa"/>
-                REJECT
+                <>
+                  <FontAwesomeIcon icon={faCheckCircle} color="#2799fa"/>
+                  REJECT
+                </>
               </SecondaryButton>
             </a>
             <a onClick={()=>handleUpdate('A')}>
                 <PrimaryButton background={"#2799fa"}>
-                <FontAwesomeIcon icon={faCheckCircle} color="#FFFFFF"/>
-                ACCEPT
+                  <>
+                    <FontAwesomeIcon icon={faCheckCircle} color="#FFFFFF"/>
+                    ACCEPT
+                  </>
               </PrimaryButton>
             </a>
 

@@ -124,15 +124,16 @@ export default function AddExpense({handleMenu}) {
           <label htmlFor="amount">
             <FontAwesomeIcon icon={faCalendar} size="lg" />
             Date
-          </label>
-          {/* <Input type="date" /> */}
+          </label>          
           <Calendar onChange={setDate} value={date} />
         </FormItem>
               
         <a onClick={handleSave}>
           <PrimaryButton background={"#2799fa"}>
-            <FontAwesomeIcon icon={faCheckCircle} color="#FFFFFF"/>
-            Add Expense
+            <>
+              <FontAwesomeIcon icon={faCheckCircle} color="#FFFFFF"/>
+              Add Expense
+            </>
           </PrimaryButton>
         </a>
 

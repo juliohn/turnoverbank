@@ -4,7 +4,7 @@ import Record from '../../components/record';
 import Link from 'next/link'
 
 import {
-  ListG,  
+  List,  
 } from './styles';
 
 import { checkData } from '../../services/check';
@@ -12,8 +12,7 @@ import { CheckProps } from '../../services/check/types';
 
 export default function Check({handleMenu}) {
   const [dataList, setDataList] = useState<CheckProps[]>();    
-  
-  
+    
   useEffect(() => {            
     loadData();
   },[])
@@ -31,7 +30,7 @@ export default function Check({handleMenu}) {
   return (
     <>
       <InHeader title='Check Control' handleMenu={handleMenu}/>           
-      <ListG>
+      <List>
           {dataList?.map(function(item){            
             return (
               <Link key={item.id} href={{ pathname: '/check-detail', query: { id: item.id } }}>
@@ -40,7 +39,7 @@ export default function Check({handleMenu}) {
                 </a>
               </Link>)
             })} 
-      </ListG>         
+      </List>         
     </>
   );
 }

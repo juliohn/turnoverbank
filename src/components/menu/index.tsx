@@ -1,13 +1,14 @@
 
 import Link from 'next/link'
-import Router from "next/router";
+
 import { AuthContext } from '../../contexts/AuthContext'
 
 import {isMobile} from 'react-device-detect';
 
-import {useContext, useState} from 'react'
+import {useContext} from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import {faScaleUnbalancedFlip,faTurnUp,faTurnDown,faMoneyCheckDollar,faBell, faUser, faGear, faCircle, faCircleQuestion, faSignOut } from '@fortawesome/free-solid-svg-icons';
 
 import {parseCookies,destroyCookie} from  'nookies';

@@ -39,7 +39,6 @@ return (
       <OutHeader/>
       <Box>
           <Form onSubmit={handleSubmit}>
-
               <Row>
                 <Col>
                   <Input type="email" placeholder='email' value={email} onChange={e => setEmail(e.target.value)}/>  
@@ -48,19 +47,15 @@ return (
                 
               <Row>
                 <Col>
-                  <Input type="password" placeholder='password' value={password} onChange={e => setPassword(e.target.value)}/>                       
-              
+                  <Input type="password" placeholder='password' value={password} onChange={e => setPassword(e.target.value)}/>                                     
                 </Col>
-                </Row>
+              </Row>
 
-              
-                
               <Row>
                 <Col>
                   <Button type='submit'>Sign In</Button>
                 </Col>
               </Row>
-            
             
             </Form>
 
@@ -71,8 +66,8 @@ return (
                     <a>Not have an account yet?</a>      
                   </Link>
                 </Footer>
-                </Col>
-              </Row>
+              </Col>
+            </Row>
             
         </Box>
     </>

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button } from './styles';
+import {PrimaryButtonProps} from './types';
 
-export default function PrimaryButton({background, children}) {
+export default function PrimaryButton({background, children}:PrimaryButtonProps) {
 
   return (
     <>

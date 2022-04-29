@@ -3,17 +3,14 @@ import InHeader from '../../components/in-header';
 import Record from '../../components/record';
 import Router from "next/router";
 import Swal from 'sweetalert2'
-
-import {
-  ListG,  
-} from './styles';
-
 import { incomesData } from '../../services/income';
 import { IncomesProps } from '../../services/income/types';
 import FloaterButton from '../../components/buttons/floater';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import Head from 'next/head';
+
+import { List} from './styles';
 
 export default function Income({handleMenu}) {
   const [dataList, setDataList] = useState<IncomesProps[]>();    
@@ -50,11 +47,9 @@ export default function Income({handleMenu}) {
       </Head>   
       
       <InHeader title='Incomes' handleMenu={handleMenu}/>           
-      <ListG>
-          {dataList?.map(function(item){            
-            return (<Record key={item.id} item={item} />)
-            })} 
-      </ListG>
+      <List>
+          {dataList?.map(function(item){return (<Record key={item.id} item={item} />)})} 
+      </List>
 
       <a onClick={handleAddIncome}>
         <FloaterButton background="#2799FB">

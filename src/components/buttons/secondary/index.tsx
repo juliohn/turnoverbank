@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from './styles';
-
-export default function SecondaryButton({background, children}) {
+import {SecondaryButtonProps} from './types'
+export default function SecondaryButton({background, children}:SecondaryButtonProps) {
 
   return (
     <>

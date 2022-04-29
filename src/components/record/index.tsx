@@ -1,7 +1,7 @@
-import Link from 'next/link'
+
 import {
-  RowG,
-  ColG,
+  Row,
+  Col,
   Box,
   Description,
   Status,
@@ -15,19 +15,19 @@ export default function Record({item,record_type='description'}:RecordProps) {
 
   return (
   <Box>               
-      <RowG>
-        <ColG>            
+      <Row>
+        <Col>            
             <Description>
               {record_type === 'description' ? item.description : item.account.user.name}
               {(item.type === 'C' && item.status === 'P') && <Status>{item.status_show}</Status>}    
             </Description>                      
             <Date>{item.created_show}</Date>
-        </ColG>
+        </Col>
         
-        <ColG flex="0">
+        <Col flex="0">
            <Amount type={item.type}> {item.type === 'E' ? '-':null} {item.amount_show}</Amount>
-        </ColG>
-      </RowG>                     
+        </Col>
+      </Row>                     
   </Box>
   )
 }
