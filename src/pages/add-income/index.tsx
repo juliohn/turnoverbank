@@ -53,6 +53,7 @@ export default function AddIncome({handleMenu}) {
           setFile(e.target.result);
         };
   }
+  
 
   const handleSave = useCallback(async () => {
     try {
