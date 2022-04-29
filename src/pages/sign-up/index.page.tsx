@@ -21,9 +21,9 @@ import {
 
 export default function SignUp() {
 
-  const [name,setName] = useState('julio');
-  const [email,setEmail] = useState('juliohn@gmail.com');
-  const [password,setPassword] = useState('123456');
+  const [name,setName] = useState<string>();
+  const [email,setEmail] = useState<string>();
+  const [password,setPassword] = useState<string>();
   
 
   async function handleSubmit(event:FormEvent){

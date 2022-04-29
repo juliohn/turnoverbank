@@ -17,9 +17,9 @@ import {
 
 export default function SignIn() {
 
-  const [email,setEmail] = useState('juliohn@gmail.com');
+  const [email,setEmail] = useState<string>();
   
-  const [password,setPassword] = useState('123456');
+  const [password,setPassword] = useState<string>();
 
   const {signIn} = useContext(AuthContext);
 
