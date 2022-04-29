@@ -18,7 +18,7 @@ import PrimaryButton from '../../components/buttons/primary';
 export default function AddIncome({handleMenu}) {
   
   const [resume, setResume] = useState<ResumeProps>(); 
-  const [amount,setAmount] = useState<string>('0.00');
+  const [amount,setAmount] = useState('0.00');
   const [description,setDescription] = useState<string>('');
   const [file, setFile] = useState<string>()
   
@@ -53,7 +53,7 @@ export default function AddIncome({handleMenu}) {
           setFile(e.target.result);
         };
   }
-  
+
 
   const handleSave = useCallback(async () => {
     try {
