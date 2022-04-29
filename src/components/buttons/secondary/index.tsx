@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from './styles';
 
-export default function SecondaryButton({border, children}) {
+export default function SecondaryButton({background, children}) {
 
   return (
     <>
-      <Button border={border}>
+      <Button background={background}>
         {children}
       </Button>
     </>

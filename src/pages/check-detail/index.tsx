@@ -2,7 +2,7 @@ import React, {useEffect,useState, useCallback} from 'react';
 import InHeader from '../../components/in-header';
 import Router from "next/router";
 
-import { RowG, ColG, FormItem, Input } from './styles';
+import { FormItem, Input } from './styles';
 
 import { useRouter } from 'next/router'
 
@@ -132,7 +132,7 @@ export default function CheckDetails({handleMenu}) {
               </SecondaryButton>
             </a>
             <a onClick={()=>handleUpdate('A')}>
-              <PrimaryButton border={"#2799fa"}>
+                <PrimaryButton background={"#2799fa"}>
                 <FontAwesomeIcon icon={faCheckCircle} color="#FFFFFF"/>
                 ACCEPT
               </PrimaryButton>

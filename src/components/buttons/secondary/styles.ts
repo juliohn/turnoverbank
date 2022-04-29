@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Button = styled.button.attrs((props: {border: string}) => props)`
+export const Button = styled.button.attrs((props: {background: string}) => props)`
   display:flex;    
   align-items:center;
   justify-content:center;  
@@ -17,6 +17,6 @@ export const Button = styled.button.attrs((props: {border: string}) => props)`
   margin: 0 10px 0 0;
   border-width: 1px;
   border-style: solid;
-  background: #fff;
-  border-color: ${(props) => props.border ? props.border : '#BDE0FE'};  
+  background: ${(props) => props.background ? props.background : '#FFFFFF'};
+  border-color: "#BDE0FE";  
 `;
